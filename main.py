@@ -133,4 +133,38 @@
 
 # 5. Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат. Выполните вызов методов и также покажите результат.
 
+# Я так понимаю задание реализовано в предыдущих?
+
 # 6. Реализовать класс Stationery (канцелярская принадлежность). Определить в нем атрибут title (название) и метод draw (отрисовка). Метод выводит сообщение “Запуск отрисовки.” Создать три дочерних класса Pen (ручка), Pencil (карандаш), Handle (маркер). В каждом из классов реализовать переопределение метода draw. Для каждого из классов метод должен выводить уникальное сообщение. Создать экземпляры классов и проверить, что выведет описанный метод для каждого экземпляра.
+
+class Stationery:
+    title: str
+
+    def meth_draw(self):
+        print("“Запуск отрисовки.”")
+
+class Pen(Stationery):
+
+    def meth_draw(self, title = 'pen'):
+        print(f"“Запуск отрисовки. ”{title}")
+    pass
+
+class Pencil(Stationery):
+    def meth_draw(self, title='pencil'):
+        print(f"“Запуск отрисовки. ”{title}")
+
+    pass
+
+class Handle(Stationery):
+    def meth_draw(self, title='handle'):
+        print(f"“Запуск отрисовки. ”{title}")
+    pass
+
+
+fir_o = Pen()
+sec_o = Pencil()
+th_o = Handle()
+
+print(fir_o.meth_draw())
+print(sec_o.meth_draw())
+print(th_o.meth_draw())
